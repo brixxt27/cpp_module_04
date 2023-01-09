@@ -1,8 +1,12 @@
-NAME	=	aaaaand_open
+NAME	=	polymorphism
 
 SRCS	=	main.cpp	\
-			ClapTrap.cpp
+			Animal.cpp	\
+			Cat.cpp		\
+			Dog.cpp 
 
-INCS	=	ClapTrap.hpp
+INCS	=	Animal.hpp	\
+			Cat.hpp		\
+			Dog.hpp
 
 include ../template.mk
