@@ -15,8 +15,24 @@ int main()
 	j->makeSound();
 
 	meta->makeSound();
+
+	delete meta;
+	delete i;
+	delete j;
 	
 	const WrongAnimal*	Wmeta = new WrongAnimal();
+	const WrongAnimal*	Wi = new WrongCat();
+
+	std::cout << Wi->getType() << " " << std::endl;
+
+	Wi->makeSound(); //will output the animal sound!
+
+	Wmeta->makeSound();
+
+	delete Wmeta;
+	delete Wi;
+	
+	system("leaks polymorphism");
 
 	return 0;
 }
