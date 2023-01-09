@@ -1,5 +1,6 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongCat.hpp"
 
 int main()
 {
@@ -15,6 +16,7 @@ int main()
 
 	meta->makeSound();
 	
-	//...
+	const WrongAnimal*	Wmeta = new WrongAnimal();
+
 	return 0;
 }

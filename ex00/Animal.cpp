@@ -6,12 +6,6 @@ Animal::Animal()
 	std::cout << "Animal's constructor is called" << std::endl;
 }
 
-Animal::Animal(std::string type)
-	: _type(type)
-{
-	std::cout << "Animal's constructor is called" << std::endl;
-}
-
 Animal::Animal(const Animal& other)
 	: _type(other._type)
 {
@@ -43,4 +37,10 @@ void		Animal::makeSound() const
 std::string	Animal::getType() const
 {
 	return _type;
+}
+
+Animal::Animal(std::string type)
+	: _type(type)
+{
+	std::cout << "Animal's constructor is called" << std::endl;
 }
