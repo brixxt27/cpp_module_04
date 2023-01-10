@@ -12,9 +12,6 @@ public:
 	virtual ~WrongCat();
 
 	void	makeSound() const;
-
-protected:
-	std::string	_type;
 };
 
 #endif
