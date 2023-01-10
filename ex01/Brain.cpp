@@ -41,12 +41,7 @@ void	Brain::SetIdeas(std::string idea)
 	}
 }
 
-//std::string*	Brain::GetIdeas() const
-//{
-//	return const_cast<std::string*>(_ideas);
-//}
-
 const std::string*	Brain::GetIdeas() const
 {
-	return (_ideas);
+	return _ideas;
 }

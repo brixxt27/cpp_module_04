@@ -2,6 +2,7 @@
 #include "Cat.hpp"
 #include "Dog.hpp"
 #include "WrongCat.hpp"
+#include <new>
 
 int main()
 {
@@ -14,7 +15,11 @@ int main()
 	//	p_animal[i] = new Cat();
 	//}
 
-	Dog*	myDog = new Dog();
+	Dog*	myDog = new (std::nothrow) Dog();
+	if (myDog == NULL) {
+		std::cout << "Memory allocation is fail!" << std::endl;
+		std::exit(1);
+	}
 
 	myDog->GetBrain()->SetIdeas("Bad idea");
 

@@ -24,7 +24,7 @@ Dog::Dog(const Dog& other)
 		std::exit(1);
 	}
 
-	_brain->SetIdeas(*(other._brain->GetIdeas()));
+	_brain->SetIdeas((other._brain->GetIdeas())[0]);
 }
 
 Dog&	Dog::operator=(const Dog& rhs)
