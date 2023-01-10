@@ -5,8 +5,8 @@ Cat::Cat()
 {
 	std::cout << "Cat's constructor is called" << std::endl;
 
-	brain = new (std::nothrow) Brain();
-	if (brain == NULL) {
+	_brain = new (std::nothrow) Brain();
+	if (_brain == NULL) {
 		std::cout << "Memory allocation is fail!" << std::endl;
 		std::exit(1);
 	}
@@ -34,7 +34,7 @@ Cat::~Cat()
 {
 	std::cout << "Cat's destructor is called" << std::endl;
 
-	delete brain;
+	delete _brain;
 	std::cout << "Cat's brain is deleted" << std::endl;
 }
 

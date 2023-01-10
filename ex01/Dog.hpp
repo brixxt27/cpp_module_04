@@ -12,10 +12,10 @@ public:
 	Dog&	operator=(const Dog& rhs);
 	virtual ~Dog();
 
-	virtual void		makeSound() const;
+	virtual void	makeSound() const;
 
 private:
-	Brain*	brain;
+	Brain*	_brain;
 };
 
 #endif

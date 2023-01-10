@@ -6,8 +6,8 @@ Dog::Dog()
 {
 	std::cout << "Dog's constructor is called" << std::endl;
 
-	brain = new (std::nothrow) Brain();
-	if (brain == NULL) {
+	_brain = new (std::nothrow) Brain();
+	if (_brain == NULL) {
 		std::cout << "Memory allocation is fail" << std::endl;
 		std::exit(1);
 	}
@@ -17,6 +17,14 @@ Dog::Dog(const Dog& other)
 	: Animal(other._type)
 {
 	std::cout << "Dog's copy constructor is called" << std::endl;
+	
+	_brain = new (std::nothrow) Brain();
+	if (_brain == NULL) {
+		std::cout << "Memory allocation is fail" << std::endl;
+		std::exit(1);
+	}
+
+	_brain->SetIdeas(other.*(_brain));
 }
 
 Dog&	Dog::operator=(const Dog& rhs)
@@ -35,7 +43,7 @@ Dog::~Dog()
 {
 	std::cout << "Dog's destructor is called" << std::endl;
 
-	delete brain;
+	delete _brain;
 	std::cout << "Dog's brain is deleted" << std::endl;
 }
 
