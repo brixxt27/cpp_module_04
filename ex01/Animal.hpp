@@ -14,7 +14,7 @@ public:
 
 	virtual void	makeSound() const;
 
-	std::string	getType() const;
+	std::string		getType() const;
 	virtual Brain*	GetBrain() const = 0;
 
 protected:

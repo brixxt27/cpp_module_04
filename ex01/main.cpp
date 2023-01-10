@@ -14,16 +14,27 @@ int main()
 	//	p_animal[i] = new Cat();
 	//}
 
-	const Animal*	myDog = new Dog();
+	Dog*	myDog = new Dog();
 
 	myDog->GetBrain()->SetIdeas("Bad idea");
 
 	for (int i = 0; i < 5; ++i) {
-		std::cout << (myDog->GetBrain())[i] << std::endl;
+		std::cout << myDog->GetBrain()->GetIdeas()[i] << std::endl;
 	}
 
-	delete myDog;
+	Dog	yourDog(*myDog);
 
+	for (int i = 0; i < 5; ++i) {
+		std::cout << yourDog.GetBrain()->GetIdeas()[i] << std::endl;
+	}
+
+	myDog->GetBrain()->SetIdeas("jayoon");
+
+	for (int i = 0; i < 5; ++i) {
+		std::cout << myDog->GetBrain()->GetIdeas()[i] << std::endl;
+	}
+	
+	delete myDog;
 
 
 	//for (int i = 0; i < 42; ++i) {

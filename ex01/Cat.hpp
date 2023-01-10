@@ -13,7 +13,7 @@ public:
 
 	virtual void	makeSound() const;
 
-	Brain*	GetBrain() const;
+	//Brain*	GetBrain() const;
 
 private:
 	Brain*	_brain;

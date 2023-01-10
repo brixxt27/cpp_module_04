@@ -24,7 +24,7 @@ Dog::Dog(const Dog& other)
 		std::exit(1);
 	}
 
-	_brain->SetIdeas(other._brain);
+	_brain->SetIdeas(*(other._brain->GetIdeas()));
 }
 
 Dog&	Dog::operator=(const Dog& rhs)
@@ -34,6 +34,15 @@ Dog&	Dog::operator=(const Dog& rhs)
 	if (this != &rhs)
 	{
 		_type = rhs._type;
+
+		delete _brain;
+		_brain = new (std::nothrow) Brain();
+		if (_brain == NULL) {
+			std::cout << "Memory allocation is fail" << std::endl;
+			std::exit(1);
+		}
+
+		_brain->SetIdeas(*(rhs._brain->GetIdeas()));
 	}
 
 	return *this;
