@@ -4,35 +4,22 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	Animal*	p_animal[42];
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
+	for (int i = 0; i < 21; ++i) {
+		p_animal[i] = new Dog();
+	}
+	for (int i = 21; i < 42; ++i) {
+		p_animal[i] = new Cat();
+	}
 
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
 
-	meta->makeSound();
 
-	delete meta;
-	delete i;
-	delete j;
-	
-	const WrongAnimal*	Wmeta = new WrongAnimal();
-	const WrongAnimal*	Wi = new WrongCat();
+	for (int i = 0; i < 42; ++i) {
+		delete p_animal[i];
+	}
 
-	std::cout << Wi->getType() << " " << std::endl;
-
-	Wi->makeSound(); //will output the animal sound!
-
-	Wmeta->makeSound();
-
-	delete Wmeta;
-	delete Wi;
-	
-	system("leaks polymorphism");
+	system("leaks i_do_not_want_to_set_the_world_on_fire");
 
 	return 0;
 }

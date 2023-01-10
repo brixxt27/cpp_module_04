@@ -1,9 +1,16 @@
 #include "Dog.hpp"
+#include <new>
 
 Dog::Dog()
 	: Animal("Dog")
 {
 	std::cout << "Dog's constructor is called" << std::endl;
+
+	brain = new (std::nothrow) Brain();
+	if (brain == NULL) {
+		std::cout << "Memory allocation is fail" << std::endl;
+		std::exit(1);
+	}
 }
 
 Dog::Dog(const Dog& other)
@@ -27,6 +34,9 @@ Dog&	Dog::operator=(const Dog& rhs)
 Dog::~Dog()
 {
 	std::cout << "Dog's destructor is called" << std::endl;
+
+	delete brain;
+	std::cout << "Dog's brain is deleted" << std::endl;
 }
 
 void	Dog::makeSound() const

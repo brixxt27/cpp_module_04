@@ -4,6 +4,12 @@ Cat::Cat()
 	: Animal("Cat")
 {
 	std::cout << "Cat's constructor is called" << std::endl;
+
+	brain = new (std::nothrow) Brain();
+	if (brain == NULL) {
+		std::cout << "Memory allocation is fail!" << std::endl;
+		std::exit(1);
+	}
 }
 
 Cat::Cat(const Cat& other)
@@ -27,6 +33,9 @@ Cat&	Cat::operator=(const Cat& rhs)
 Cat::~Cat()
 {
 	std::cout << "Cat's destructor is called" << std::endl;
+
+	delete brain;
+	std::cout << "Cat's brain is deleted" << std::endl;
 }
 
 void	Cat::makeSound() const
