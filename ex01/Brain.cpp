@@ -34,9 +34,15 @@ Brain::~Brain()
 	std::cout << "Brain's destructor is called" << std::endl;
 }
 
-void	Brain::SetIdeas(Brain& other)
+void	Brain::SetIdeas(std::string idea)
 {
 	for (int i = 0; i < 100; ++i) {
-		_ideas[i] = other._ideas[i];
+		_ideas[i] = idea;
 	}
+}
+
+//string[]
+std::string*	Brain::GetIdeas() const
+{
+	return _ideas;
 }

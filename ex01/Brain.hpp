@@ -11,7 +11,8 @@ public:
 	Brain&	operator=(const Brain& rhs);
 	~Brain();
 
-	void	SetIdeas(Brain& other);
+	void			SetIdeas(std::string idea);
+	std::string*	GetIdeas() const;
 
 private:
 	std::string	_ideas[100];
