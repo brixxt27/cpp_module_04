@@ -130,8 +130,8 @@ public:
 	virtual void use(ICharacter& target);
 };
 ```
-- Meteria 의 구체적인 클래스인 Ice와 Cure를 구현해라. 그들의 type을 그들의 이름을 lower case로 변환한 값으로 채워넣어라. 물론 그들의 멤버 함수 clone() 은 값은 타입의 새로운 인스턴스를 반환할 것이다. 만약 Ice Materia 를 clone 하면 새로운 Ice Meteria를 가질 것이다.
-- (ICharacter&) 멤버 함수는 출력할 것이다:
+- Meteria 의 concrete class인 Ice와 Cure를 구현해라. 그들의 type을 그들의 이름을 lower case로 변환한 값으로 채워넣어라. 물론 그들의 멤버 함수 clone()의 값은 타입의 새로운 인스턴스를 반환할 것이다. 만약 Ice Materia 를 clone 하면 새로운 Ice Meteria를 가질 것이다.
+- use(ICharacter& ) 멤버 함수는 출력할 것이다:
 	- Ice: "* shoots an ice bolt at {name} *"
 	- Cure: "* heals {name}’s wounds *"
 - {name}은 인자로 들어오는 캐릭터의 이름이다. 괄호를 출력하지 마라!
