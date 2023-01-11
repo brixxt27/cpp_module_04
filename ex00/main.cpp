@@ -4,9 +4,13 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const Animal* meta = new (std::nothrow) Animal();
+	const Animal* j = new (std::nothrow) Dog();
+	const Animal* i = new (std::nothrow) Cat();
+	if (meta == NULL || i == NULL || j == NULL) {
+		std::cout << "Memory allocation is fail" << std::endl;
+		std::exit(1);
+	}
 
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
@@ -20,8 +24,12 @@ int main()
 	delete i;
 	delete j;
 	
-	const WrongAnimal*	Wmeta = new WrongAnimal();
-	const WrongAnimal*	Wi = new WrongCat();
+	const WrongAnimal*	Wmeta = new (std::nothrow) WrongAnimal();
+	const WrongAnimal*	Wi = new (std::nothrow) WrongCat();
+	if (Wmeta == NULL || Wi == NULL) {
+		std::cout << "Memory allocation is fail" << std::endl;
+		std::exit(1);
+	}
 
 	std::cout << Wi->getType() << " " << std::endl;
 
@@ -32,7 +40,7 @@ int main()
 	delete Wmeta;
 	delete Wi;
 	
-	system("leaks polymorphism");
+	//system("leaks polymorphism");
 
 	return 0;
 }
