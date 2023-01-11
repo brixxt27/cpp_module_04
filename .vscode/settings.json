@@ -12,6 +12,19 @@
 		"stdexcept": "cpp",
 		"system_error": "cpp",
 		"typeinfo": "cpp",
-		"iosfwd": "cpp"
+		"iosfwd": "cpp",
+		"__functional_base": "cpp",
+		"__functional_base_03": "cpp",
+		"__hash_table": "cpp",
+		"__tuple": "cpp",
+		"algorithm": "cpp",
+		"array": "cpp",
+		"chrono": "cpp",
+		"type_traits": "cpp",
+		"iterator": "cpp",
+		"limits": "cpp",
+		"ratio": "cpp",
+		"tuple": "cpp",
+		"utility": "cpp"
 	}
 }
