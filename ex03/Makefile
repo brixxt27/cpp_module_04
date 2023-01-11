@@ -1,8 +1,8 @@
-NAME	=	aaaaand_open
+NAME	=	interface_and_recap
 
-SRCS	=	main.cpp	\
-			ClapTrap.cpp
+SRCS	=	main.cpp		\
+			AMateria.cpp	\
 
-INCS	=	ClapTrap.hpp
-
+INCS	=	AMateria.hpp	\
+			
 include ../template.mk
