@@ -2,7 +2,7 @@
 #include "Cure.hpp"
 #include "Ice.hpp"
 
-Character::Character(std::string& name)
+Character::Character(std::string name)
 	: _name(name)
 {
 	for (int i = 0; i < CNT_INVENTORY; ++i) {
