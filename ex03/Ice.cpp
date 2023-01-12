@@ -12,9 +12,7 @@ Ice::Ice(const Ice& other)
 
 Ice&	Ice::operator=(const Ice& rhs)
 {
-	/**
-	 * While assigning a Materia to another, copying the type doesn’t makesense.
-	 */
+	std::cout << "While assigning a Materia to another, copying the type doesn't makesense." << std::endl;
 }
 
 Ice::~Ice()
