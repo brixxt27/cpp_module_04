@@ -3,6 +3,8 @@
 
 #include "IMateriaSource.hpp"
 
+#define CNT_INVENTORY 4
+
 class MateriaSource : public IMateriaSource
 {
 public:
@@ -11,7 +13,7 @@ public:
 	MateriaSource&	operator=(const MateriaSource& rhs);
 	virtual ~MateriaSource();
 
-	void		learnMateria(AMateria*);
+	void		learnMateria(AMateria* m);
 	AMateria*	createMateria(std::string const & type);
 
 private:
