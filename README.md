@@ -136,7 +136,7 @@ public:
 	- Cure: "* heals {name}’s wounds *"
 - {name}은 인자로 들어오는 캐릭터의 이름이다. 괄호를 출력하지 마라!
 - Meteria 를 다른 곳으로 할당하는 동안 타입을 복사하는 것은 옳지 않다.
-- 다음 따라오는 인터페이스를 구현하는 구체적인 class Character를 작성해라.
+- 다음 따라오는 인터페이스를 구현하는 concrete class Character를 작성해라.
 ```
 class ICharacter
 {
