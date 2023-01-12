@@ -150,7 +150,7 @@ public:
 ```
 - Character 4개의 슬롯을 가지고 있고, 이는 최대 4개의 Materias를 가질 수 있다는 것을 의미한다. 생성 시 인벤토리(슬롯)은 비어 있다. 그들은 그들이 발견한 비어 있는 처음 슬롯에 Materias를 장착한다. 이것은 0 부터 3까지의 순서대로 채워넣는다는 의미이다. 가득 찬 인벤토리에 Materia 를 채우려고 시도하는 경우나, 또는 존재하지 않은 Materia를 사용/해제하려 하는 것은, 아무 것도 일어나지 않는다.(그러나 여전히 버그는 금지되어 있다.) unequip() 멤버 함수는 Materia를 삭제하면 안 된다.
 - 캐릭터가 바닥에 남겨둔 Materias 는 좋을 대로 처리해라. unequip(), 또는 다른 것을 호출하기 전에 주소를 저장하되, 메모리 누수를 절대 피해라!
-- ues(int, ICharacter&) 멤버 함수는 slot[idx]의 Materia를 사용해야 하고, 타겟 인자에 AMateria::use 함수가 사용된다.
+- use(int, ICharacter&) 멤버 함수는 slot[idx]의 Materia를 사용해야 하고, 타겟 인자에 AMateria::use 함수가 사용된다.
 - ***너의 캐릭터의 인벤토리는 어떠한 타입의 AMateria도 지원할 것이다.(아마 AMateria\* 등으로 사용하라는 이야기 같다)***
 - 너의 Character 는 name을 인자로 받는 생성자가 있어야 한다. Character의 어떤 복사(복사 생성자나 복사 할당 연산자를 사용하는)든지 깊은 복사를 해야 한다. 복사하는 동안, Character의 Materias 는 새로운 것이 인벤토리에 추가 되기 전에 삭제 되어야 한다. 물론 Materias 는 Character 의 소멸 때 삭제 되어야 한다.
 - 다음 따라오는 인터페이스를 구현할 MateriaSource 를 구현해라.
