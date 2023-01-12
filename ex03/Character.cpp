@@ -65,7 +65,7 @@ std::string const &	Character::getName() const
 void	Character::equip(AMateria* m)
 {
 	for (int i = 0; i < CNT_INVENTORY; ++i) {
-		if (_slot[i] != NULL) {
+		if (_slot[i] == NULL) {
 			_slot[i] = m;
 			return;
 		}

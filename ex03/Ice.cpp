@@ -12,7 +12,11 @@ Ice::Ice(const Ice& other)
 
 Ice&	Ice::operator=(const Ice& rhs)
 {
-	std::cout << "While assigning a Materia to another, copying the type doesn't makesense." << std::endl;
+	if (this != &rhs) {
+		std::cout << "While assigning a Materia to another, copying the type doesn't makesense." << std::endl;
+	}
+
+	return *this;
 }
 
 Ice::~Ice()
@@ -32,5 +36,5 @@ AMateria*	Ice::clone() const
 
 void	Ice::use(ICharacter& target)
 {
-	std::cout << "* shoots an ice bolt at " << target.getName() << " *";
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
 }

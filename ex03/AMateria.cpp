@@ -30,7 +30,7 @@ std::string const & AMateria::getType() const
 
 void	AMateria::use(ICharacter& target)
 {
-	std::cout << "This is base class's use function" << std::endl;
+	std::cout << "This is base class's use function!" << " Target is " << target.getName() << std::endl;
 }
 
 AMateria::AMateria()

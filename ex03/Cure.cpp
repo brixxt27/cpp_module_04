@@ -12,7 +12,11 @@ Cure::Cure(const Cure& other)
 
 Cure&	Cure::operator=(const Cure& rhs)
 {
-	std::cout << "While assigning a Materia to another, copying the type doesn't makesense." << std::endl;
+	if (this != &rhs) {
+		std::cout << "While assigning a Materia to another, copying the type doesn't makesense." << std::endl;
+	}
+
+	return *this;
 }
 
 Cure::~Cure()
@@ -32,6 +36,6 @@ AMateria*	Cure::clone() const
 
 void	Cure::use(ICharacter& target)
 {
-	std::cout << "* heals " << target.getName() << "'s wounds *";
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
