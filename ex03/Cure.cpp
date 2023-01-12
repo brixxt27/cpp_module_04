@@ -25,13 +25,13 @@ Cure::~Cure()
 
 AMateria*	Cure::clone() const
 {
-	AMateria* newIce = new (std::nothrow) Cure();
+	AMateria* newCure = new (std::nothrow) Cure();
 
-	if (newIce == NULL) {
+	if (newCure == NULL) {
 		std::cout << "Mallocation fail" << std::endl;
 		exit(1);
 	}
-	return newIce;
+	return newCure;
 }
 
 void	Cure::use(ICharacter& target)
