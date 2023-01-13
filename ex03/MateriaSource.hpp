@@ -17,7 +17,7 @@ public:
 	AMateria*	createMateria(std::string const & type);
 
 private:
-	AMateria*	_slot[4];
+	AMateria*	_slot[CNT_INVENTORY];
 };
 
 #endif

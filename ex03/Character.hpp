@@ -21,7 +21,7 @@ public:
 
 private:
 	std::string	_name;
-	AMateria*	_slot[4];
+	AMateria*	_slot[CNT_INVENTORY];
 
 	Character();
 };
