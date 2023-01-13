@@ -71,6 +71,20 @@ int main()
 	}
 
 	delete myDog;
+
+	/**
+	 * WrongCat
+	*/
+	// WrongCat		yourCat; 
+
+	// {
+	// 	WrongCat	myCat;
+
+	// 	yourCat = myCat;		
+	// }
+
+	// std::cout << yourCat.getBrain()->GetIdeas() << std::endl;
+
 	//system("leaks i_do_not_want_to_set_the_world_on_fire");
 
 	return 0;
