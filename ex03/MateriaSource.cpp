@@ -72,8 +72,7 @@ AMateria*	MateriaSource::createMateria(std::string const & type)
 
 	for (i = 0; i < CNT_INVENTORY; i++) {
 		if (_slot[i]->getType() == type)
-			break;
+			return _slot[i]->clone();
 	}
-	return _slot[i]->clone();
+	return NULL;
 }
-
